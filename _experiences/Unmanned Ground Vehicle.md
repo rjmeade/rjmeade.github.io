@@ -4,6 +4,7 @@ title: "Unmanned Ground Vehicle"
 categories: misc
 location: "University of California, Irvine"
 priority: "4"
+excerpt: "Mechanical design of unmanned ground vehicle with weight restriction and impact force requirements."
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.

@@ -7,3 +7,5 @@
 #
 layout: home
 ---
+
+My name is Rick Meade, and I am a fourth-year Mechanical Engineering undergraduate at the University of California, Irvine.

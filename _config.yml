@@ -4,7 +4,7 @@ author:
   email: rjmeade0@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   Mechanical Engineering student interested in making a positive impact on the world through engineering. 
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
