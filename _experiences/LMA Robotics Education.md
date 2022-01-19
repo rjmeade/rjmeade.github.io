@@ -6,12 +6,13 @@ location: "Legacy Magnet Academy, Tustin CA"
 priority: "6"
 excerpt: "Robotics mentor at local middleschool."
 ---
+<figure>
+    <img class="img-responsive" src="/assets/img/2021_lma_robotics.jpg" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
+    <figcaption style="text-align:center"><i>LMA Middle School Robotics Team Opening Day</i></figcaption>
+</figure>
 
-Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
+Tuesdays and Thursdays volunteer at a local middle school to help with their robotics team. vex robotics had a large impact on my life, so i wanted to pay it forward and mentor other teams.
 
-{% comment %}
-Might you have an include in your theme? Why not try it here!
-{% include my-themes-great-include.html %}
-{% endcomment %}
+impact a lot of students, teach them about engineering concepts both technical and soft skills. most importantly how to be a good person (teammate, leader, problem solver).
 
-No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.
+empower the engineers of tomorrow.

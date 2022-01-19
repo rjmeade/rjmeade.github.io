@@ -2,7 +2,7 @@
 layout: experience
 title: "UAV Forge"
 categories: misc
-location: "Student-led project at the University of California, Irvine"
+location: "University of California, Irvine" # Student-led project at the University of California, Irvine
 priority: "1"
 excerpt: "Chief Engineer for UCI student-led engineering project."
 ---
@@ -13,7 +13,7 @@ excerpt: "Chief Engineer for UCI student-led engineering project."
 </figure>
 
 
-UAV Forge is an interdisciplinary engineering competition team participating in the annual [AUVSI-SUAS](https://www.auvsi-suas.org/AUVSI-SUAS) competition, which simulates an automated aerial vehicle package delivery mission. UAV Forge is tasked with designing, manufacturing, assembling, and testing a drone that autonomously:
+UAV Forge is an interdisciplinary engineering competition team at UCI participating in the annual <a href="https://www.auvsi-suas.org" target="_blank">AUVSI-SUAS</a> competition, which simulates an automated aerial vehicle package delivery mission. UAV Forge is tasked with designing, manufacturing, assembling, and testing a drone that autonomously:
 - Navigates waypoints
 - Flies to the ground vehicle drop location and performs an airdrop
 - Maps and identifies targets in a search area
@@ -22,11 +22,23 @@ UAV Forge is an interdisciplinary engineering competition team participating in 
 As Chief Engineer for the 2021-2022 season, my primary responsibilities on the team are oversight of the engineering design process, including the design, manufacturing, and integration of all software and hardware components, and coordinating project scheduling.
 
 ### **Engineering Philosophy**
-A core component of UAV Forge is our commitment to a rigorous, objective design process. Each decision we make about individual electrical and structural components will ultimately impact the performance of our final system, so it is imperative that every design decision is made purposefully, thoroughly considering alternative solutions. Throughout the quarter, design process tools such as decision matrices and trade studies were introduced to the team, which members are strongly encouraged to use when deciding between designs. The commitment to an objective design process started at the beginning of this past summer, when the team broke down scoring opportunities from the AUVSI-SUAS Rulebook to decide the archetype of aircraft we would be designing (fixed-wing, multirotor, helicopter, etc.)
+A core component of UAV Forge is our commitment to a rigorous, objective design process. Each decision we make about individual electrical and structural components will ultimately impact the performance of our final system, so it is imperative that every design decision is made purposefully, thoroughly considering alternative solutions. Throughout the quarter, we introduced design process tools such as decision matrices and trade studies, which members are strongly encouraged to utilize when deciding between designs.
+
+The commitment to an objective design process started at the beginning of this past summer, when the team broke down scoring opportunities from the AUVSI-SUAS Rulebook to decide the archetype of aircraft we would be designing (fixed-wing, multirotor, helicopter, etc.)
 
 <figure>
     <img class="img-responsive" src="/assets/img/points_breakdown_zoomed.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
     <figcaption style="text-align:center"><i>Figure 1: Excerpt of Points Breakdown</i></figcaption>
 </figure>
 
-To ensure consistent operation of our final system, we follow a strict testing protocol of unit tests, integration tests, and system tests. Each component first goes through a unit test, where its individual function is verified. Next, multiple components are combined together and the function of that subsystem is tested. Finally, we test the interactions between subsystems to conduct system tests, which is the final layer of testing before the UAV is sent to competition.
+As a team, we make extensive use of numerical analysis to decide between different component options. Represented in the figure below is an example of a flight time estimate I compiled from manufacturer specifications to choose between two motors.
+
+<figure>
+    <img class="img-responsive" src="/assets/img/flight_time_estimate.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
+    <figcaption style="text-align:center"><i>Figure 2: Flight Time Estimate</i></figcaption>
+</figure>
+
+In this analysis, we were determining whether it would be worth it to step up our battery voltage at the cost of decreased battery capacity. We observed a lower overall flight time with this change, so we did not order the higher-voltage components.
+
+### **Testing**
+To ensure consistent operation of our final system, we follow a strict testing protocol of unit tests, integration tests, and system tests. Each component first goes through a unit test, where its individual function is verified. Next, multiple components are combined together into a subsystem, which is tested to verify the effective integration between parts. Finally, we test the interactions between subsystems to conduct system tests, which is the final layer of testing before the UAV is sent to competition.
