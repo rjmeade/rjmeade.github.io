@@ -12,38 +12,35 @@ excerpt: "Utilized Solidworks Topology Optimization to minimize weight of aircra
     <figcaption style="text-align:center"><i>Fixed-Wing on Test Day</i></figcaption>
 </figure>
 
-uci senior design project. requirements (MODULAR fixed-wing test bed that flies for x amount of time and can carry x payload). my role on the team (structural design, CAD, electronics verification, manufacturing and assembly).
+In 2021, I was part of a senior design project team whose objective was to design, manufacture, and test an autonomous fixed-wing aircraft. The goal was to design a modular fixed-wing test bed that flies for 10 minutes carrying 1 pound of payload. UAV Forge would use the plane as a proof of concept for a fixed-wing design and for developmental testing. My roles on the team were structural design of the wing mount, CADing the plane assembly, and fabrication.
 
 ### **Wing Mount Design**
-manufacturing wings separately from fuselage to make our aircraft modular and transportable, need a way to attach wings to fuselage. wanted something where we could take wings off and replace with new wings in less then a couple mins.
-
-clamping mount to adjust wing positioning along the fuselage and to adjust cog.
+The aircraft wings were manufactured separately from the fuselage to make the aircraft modular and transportable. An attachment mechanism needed to be designed that allowed for quick assembly while being rigid enough for flight. A clamping mount was chosen so that the wing's position along the fuselage could be changed.
 
 <figure>
     <img class="img-responsive" src="/assets/img/wing_attachment_isometric_view.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
-    <figcaption style="text-align:center"><i>CAD Assembly of Wing Attachment</i></figcaption>
+    <figcaption style="text-align:center"><i>CAD Assembly of Wing Attachment + Carbon Fiber Fuselage</i></figcaption>
 </figure>
 
-decided to 3dp for rapid prototyping, quick changes if necessary and it was a fairly custom part so 3dp good for manufacturing random geometries.
+Since there were strict schedule restrictions and the geometry of the wing-attachment mechanism was fairly complex, we decided to 3D print the part. We chose ABS plastic as the material due to its rigidity and availability.
 
 <figure>
     <img class="img-responsive" src="/assets/img/wing_attachment_side_view.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
     <figcaption style="text-align:center"><i>Wing Attachment Side View</i></figcaption>
 </figure>
 
-used tensioning to secure wing to fuselage (beige color is rubber bands in the figure). convenient for assembly and act as a point of failure so wings do not break in a crash (most labor-intensive part of our assembly).
-moment calculations
-https://docs.google.com/spreadsheets/d/1OqkLYJSMPUrWA_bF9hzqquYfCP3xtj78jg7_b-HxPtc/edit?usp=sharing
+Tensioning was utilized to fix the wing to the wing-attachment mechanism. In the figure above, the orange color represents rubber bands that tension the wing to the fuselage. This strategy allows for convenient assembly and will act as a point of failure in a crash so that the wings do not absorb all of the force. <a href="https://docs.google.com/spreadsheets/d/1OqkLYJSMPUrWA_bF9hzqquYfCP3xtj78jg7_b-HxPtc/edit?usp=sharing" target="_blank">Moment estimations</a> were conducted on the circular struts that protrude from the part to ensure they would not break from tension forces.
+
 
 ##### **Topology Optimization Study**
-wanted to reduce weight as much as possible, was one of our main concerns with our design. wanted to ensure that we are not overdesigning. use solidworks topology optimization to analyze areas where we can cut material out without sacrificing structural integrity.
+One of the primary goals of the structural design was to reduce the aircraft's weight. After obtaining an estimate of the forces the wing-attachment mechanism would endure in a crash and in flight, a topology optimization study was conducted to analyze areas where we can cut material without sacrificing structural integrity.
 
 <figure>
     <img class="img-responsive" src="/assets/img/wing_attachment_topology_results.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
     <figcaption style="text-align:center"><i>Topology Optimization Results</i></figcaption>
 </figure>
 
-superimposed optimization results onto initial model of the solidworks part and manually cut away unnecessary structure.
+We superimposed the optimization results onto our initial model of the Solidworks part and manually cut away unnecessary structure. Ultimately, we were able to reduce the weight of this part by 15% while maintaining a factor of safety of two.
 
 <div class="row">
   <div class="column">
@@ -60,13 +57,8 @@ superimposed optimization results onto initial model of the solidworks part and 
   </div>
 </div>
 
-reduce weight by 15%
-
-
 ##### **Static Load Simulations**
-after weight cut, worried about design withstanding forces.
-
-back of napkin calculations with rough assumptions to generate max force. used moment impulse equation to estimate force plane would experience in worst case scenario (crash). applied force to static load simulation in two scenarios, one where force concentrated on circular struts and one where force concentrated where carbon fiber rod would be
+After the topology optimization simulations were conducted, static load simulations were run on the part to ensure it would withstand a crash. Back of the napkin calculations were done to produce a max force value that the aircraft would experience in a crash. The momentum-impulse equation was used to estimate the force, which we applied to a static load simulation in two different scenarios. One where the force is concentrated on the circular struts, and one where the force is concentrated where our carbon fiber wing spars would intersect with the part.
 
 <div class="row">
   <div class="column">
@@ -83,7 +75,7 @@ back of napkin calculations with rough assumptions to generate max force. used m
   </div>
 </div>
 
-evaluated against PETG (3dp material) 40% infill maximum stress threshold of 20MPa \[1\], both cases had a factor of safety of 3.5+, printed design and used in final iteration of aircraft.
+We determined that in either case, the maximum stress experienced by the part would be significantly less than the 20 MPa maximum stress threshold of 40% infill ABS \[1\]. We 3D-printed the design and used it on the final iteration of the aircraft.
 
 ##### **References**
 

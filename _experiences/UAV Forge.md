@@ -8,37 +8,57 @@ excerpt: "Chief Engineer for UCI student-led engineering project."
 ---
 
 <figure>
-    <img class="img-responsive" src="/assets/img/2020_2021_hex.jpg" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
-    <figcaption style="text-align:center"><i>2020-2021 UAV</i></figcaption>
+    <img class="img-responsive" src="/assets/img/2022_hex.jpg" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
+    <figcaption style="text-align:center"><i>2022 Competition Season Drone</i></figcaption>
 </figure>
 
 
 UAV Forge is an interdisciplinary engineering competition team at UCI participating in the annual <a href="https://www.auvsi-suas.org" target="_blank">AUVSI-SUAS</a> competition, which simulates an automated aerial vehicle package delivery mission. UAV Forge is tasked with designing, manufacturing, assembling, and testing a drone that autonomously:
 - Navigates waypoints
-- Flies to the ground vehicle drop location and performs an airdrop
 - Maps and identifies targets in a search area
 - Actively avoids other drones and obstacles 
+- Airdrops an autonomous ground vehicle
 
-As Chief Engineer for the 2021-2022 season, my primary responsibilities on the team are oversight of the engineering design process, including the design, manufacturing, and integration of all software and hardware components, and coordinating project scheduling.
+As Chief Engineer for the 2021-2022 season, my primary responsibilities on the team are oversight of the engineering design process, including the design, manufacturing, and integration of all software and hardware components, coordination of project scheduling, and the completion of competition deliverables (Technical Design Paper, Design Review Poster).
 
-### **Engineering Philosophy**
+### **Engineering Design Process**
 A core component of UAV Forge is our commitment to a rigorous, objective design process. Each decision we make about individual electrical and structural components will ultimately impact the performance of our final system, so it is imperative that every design decision is made purposefully, thoroughly considering alternative solutions. Throughout the quarter, we introduced design process tools such as decision matrices and trade studies, which members are strongly encouraged to utilize when deciding between designs.
 
-The commitment to an objective design process started at the beginning of this past summer, when the team broke down scoring opportunities from the AUVSI-SUAS Rulebook to decide the archetype of aircraft we would be designing (fixed-wing, multirotor, helicopter, etc.)
+The AUVSI Competition Rules provide tasks and scoring equations, which were developed into system requirements. Marginal and ideal values were determined based on maximizing competition points. System requirements ensure that subteams operate cohesively and allow design teams to cross-reference individual subsystem designs with the goals of the overall system.
 
 <figure>
-    <img class="img-responsive" src="/assets/img/points_breakdown_zoomed.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
-    <figcaption style="text-align:center"><i>Figure 1: Excerpt of Points Breakdown</i></figcaption>
+    <img class="img-responsive" src="/assets/img/system_requirements_color.jpg" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
+    <figcaption style="text-align:center"><i>System Requirements Analysis</i></figcaption>
 </figure>
 
-As a team, we make extensive use of numerical analysis to decide between different component options. Represented in the figure below is an example of a flight time estimate I compiled from manufacturer specifications to choose between two motors.
+In order to justify purchasing and design decisions, numerical analysis is conducted to decide between different designs or components. In the figure below, we used manufacturer data to estimate flight time for two different motor configurations. Graphs of flight time (pictured on the right) indicated that KDE5215XF-330 motors provide greater flight time across all throttle and thrust ranges. Therefore, they were the clear choice to use on the competition vehicle.
 
 <figure>
     <img class="img-responsive" src="/assets/img/flight_time_estimate.png" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
-    <figcaption style="text-align:center"><i>Figure 2: Flight Time Estimate</i></figcaption>
+    <figcaption style="text-align:center"><i>Flight Time Estimate</i></figcaption>
 </figure>
 
-In this analysis, we were determining whether it would be worth it to step up our battery voltage at the cost of decreased battery capacity. We observed a lower overall flight time with this change, so we did not order the higher-voltage components.
+Competition payload requirements significantly increase the total weight of the drone. The additional loads impose considerable thrust requirements on the drone's motors. A comparison of motor configurations was performed to determine whether increasing propeller size would improve drone performance. In Figure 3 below, our selected motor configuration is shown in black, overlayed on top of performance data derived from long propeller configurations.
+
+<figure>
+    <img class="img-responsive" src="/assets/img/motor_comparison_2.jpg" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
+    <figcaption style="text-align:center"><i>Thrust vs. Current for Various Motor Configurations</i></figcaption>
+</figure>
+
+Though the data indicate that longer propellers would increase the thrust generated per amp of current by approximately 30%, significant changes to the drone's structure would have to be made to accommodate longer propellers. The team determined that the current motor-propeller configuration suits the system requirements, and an alternate configuration was not pursued.
 
 ### **Testing**
-To ensure consistent operation of our final system, we follow a strict testing protocol of unit tests, integration tests, and system tests. Each component first goes through a unit test, where its individual function is verified. Next, multiple components are combined together into a subsystem, which is tested to verify the effective integration between parts. Finally, we test the interactions between subsystems to conduct system tests, which is the final layer of testing before the UAV is sent to competition.
+Throughout the competition season, three levels of testing are applied to each component of the drone to ensure consistent performance:
+ - **Unit Test**: Individual component function is verified.
+     - Example: Verify that a motor rotates at a specified RPM under predetermined current load.
+ - **Integration Test**: Subsystems comprised of multiple components are assembled and tested.
+     - Example: Mount multiple motors to the drone frame and conduct a static thrust test.
+ - **System Test**: Multiple subsystems are combined to perform high-level functions.
+     - Example: Drone autonomously navigates a waypoint mission and lands.
+
+ By following a layered, progressive testing procedure, design conflicts or issues with component integration can be caught early on in the testing process. A system-level testing plan outlines target testing dates for various system tests required by the AUVSI competition. Results from these tests are documented and submitted with the team's flight readiness review in June.
+
+<figure>
+    <img class="img-responsive" src="/assets/img/testing_schedule.jpg" alt="" style="display:block;float:none;margin-left:auto;margin-right:auto" />
+    <figcaption style="text-align:center"><i>Testing Schedule</i></figcaption>
+</figure>
