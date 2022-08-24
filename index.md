@@ -12,4 +12,4 @@ layout: home
     <figcaption style="text-align:center">UAV Forge - Receiving UCI's 2022 Dean's Choice Award</figcaption>
 </figure>
 
-My name is Rick Meade, and I am a recent mechanical engineering graduate from the University of California, Irvine. Next year, I will be attending Cornell University for my Master's in Mechanical Engineering. Linked below are some of the academic experiences I have had at UCI that have shaped who I am as a person and as an engineer!
+My name is Rick Meade, and I am a graduate student at Cornell University pursuing my Masters of Engineering in Mechanical Engineering. Linked below are some of the project experiences I have had that have shaped who I am as a person and as an engineer!
